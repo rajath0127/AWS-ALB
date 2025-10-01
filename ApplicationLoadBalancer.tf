@@ -244,7 +244,7 @@ resource "aws_instance" "VPC-01-EC2-02" {
                 sudo apt update -y
                 sudo apt install apache2 -y
                 sudo systemctl start apache2
-                sudo bash -c "echo '<h1>Server Details:</h1><p><strong>Hostname:</strong> $(hostname)</p><p><strong>IP Address:</strong> $(hostname -I)</p>' > /var/www/html/index.html"
+                sudo "echo '<h1>Server Details:</h1><p><strong>Hostname:</strong> $(hostname)</p><p><strong>IP Address:</strong> $(hostname -I)</p>' > /var/www/html/index.html"
                 EOF
 
   tags = {
